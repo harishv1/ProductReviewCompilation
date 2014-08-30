@@ -1,0 +1,133 @@
+
+<site>
+    <name>Amazon</name>
+    <prefix></prefix>
+    <searchURL>https://www.amazon.com/s/?keywords=</searchURL>
+	
+	<searchParameters>
+	</searchParameters>
+	
+    <searchTags>
+        <filter>
+            <attributes>'class' : 'prod'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'rvwCnt'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </searchTags>
+    <allReviewTags>
+    </allReviewTags>
+    <reviewHeading>
+        <filter>
+            <attributes>'id' : 'productReviews'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>True</recursive>
+			<tag>td</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div[2]</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>span[2]</tag>
+        </filter>
+    </reviewHeading>
+    <reviewText>
+        <filter>
+            <attributes>'id' : 'productReviews'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>True</recursive>
+			<tag>td</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div</tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'reviewText'</attributes>
+            <recursive></recursive>
+			<tag></tag>
+        </filter>
+    </reviewText>
+    <reviewUpvote>
+        <filter>
+            <attributes>'id' : 'productReviews'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>True</recursive>
+			<tag>td</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div[1]</tag>
+        </filter>
+    </reviewUpvote>
+    <reviewStarRating>
+        <filter>
+            <attributes>'id' : 'productReviews'</attributes>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>True</recursive>
+			<tag>td</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>div[2]</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>False</recursive>
+			<tag>span[1]</tag>
+        </filter>
+    </reviewStarRating>
+    <reviewNextPage>
+        <filter>
+            <attributes>'class':'paging'</attributes>
+            <recursive>True</recursive>
+			<tag>span</tag>
+        </filter>
+        <filter>
+            <attributes></attributes>
+            <recursive>True</recursive>
+			<tag>a</tag>
+        </filter>
+    </reviewNextPage>
+</site>

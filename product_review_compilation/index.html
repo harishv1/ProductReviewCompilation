@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+        <script type="text/javascript" src="./jscharts.js"></script>
+        <style>
+        body {
+            font-family:calibri;
+        }
+        #saResult {
+            position:fixed;
+            margin-left:75%;
+            margin-top:20%;
+            float:right;
+        }
+        </style>
+        <script>
+            function submit() {
+                $.ajax( {
+                    url:"/cgi-bin/getReviews.py",
+                    data: 'search=' + $('#search').val(),
+                    dataType : 'json',
+                    success: function( data ) {
+                        document.getElementById('reviews').innerHTML = '';
+                        var content = document.getElementById('reviews').innerHTML;
+                        for(i = 1 ; i < data.length ; i++) {
+                            for(j = 0 ; j < data[i].length ; j++) {
+                                rev = data[i][j];
+                                console.log(rev);
+                                content += "<div style = 'border:1px solid black;background:rgb(240,245,250);width:70%;margin:5px;'>";
+                                content += "<div><strong>"+rev['heading']+"</strong></div>";
+                                content += "<div>"+rev['upvotes'][0]+" out of " + rev['upvotes'][1] +" votes</div>";
+                                content += "<div>";
+                                for (k = 0 ; k < parseInt(rev['stars']) ; k++)
+                                    content += '&#9733';
+                                content += "</div>";
+                                content += "<div>"+rev['text']+"</div>";
+                                content += "</div>";
+                            }
+                        }
+                        document.getElementById('reviews').innerHTML = content;
+                        result = parseFloat(data[0]) * 100
+                        var myData = new Array(['Positive',result], ['Negative', 100 - result]);
+                        var colors = ['#00C400', '#750303'];
+                        var myChart = new JSChart('saResult', 'pie');
+                        myChart.setDataArray(myData);
+                        myChart.colorizePie(colors);
+                        myChart.setTitle('Sentiment analysis');
+                        myChart.setTitleColor('#8E8E8E');
+                        myChart.setPieRadius(85);
+                        myChart.setPieUnitsColor('#555');
+                        myChart.draw();
+                        
+                        $('#saResult').attr({'style':'float:right'});
+                    },
+                    failure: function( _error ) {
+                        alert( "error" );
+                    }
+                } );
+            }
+        </script>
+    </head>
+    <body>
+        <div id = 'input-field'>
+            Enter product name:
+            <input type='text' id='search'>
+            <input type='submit' id='search_button' value='Search' onClick='submit();'>
+            <div id='saResult'></div>
+            <div id='reviews'></div>
+        </div>
+        <script>
+        
+                        
+         </script>
+    </body>
+</html>

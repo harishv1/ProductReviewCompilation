@@ -1,0 +1,113 @@
+<site>
+    <name>Flipkart</name>
+    <prefix>https://www.flipkart.com</prefix>
+    <searchURL>https://www.flipkart.com/search?q=</searchURL>
+	
+	<searchParameters>
+	</searchParameters>
+	
+    <searchTags>
+        <filter>
+            <attributes>'class':'product-unit'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class':'pu-title'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </searchTags>
+    <allReviewTags>
+        <filter>
+            <attributes>'class':'pp-top-reviews-wiki'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </allReviewTags>
+    <reviewHeading>
+        <filter>
+            <attributes>'class' : 'review-list'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'fk-review'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'fk-font-normal'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </reviewHeading>
+    <reviewText>
+        <filter>
+            <attributes>'class' : 'review-list'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'fk-review'</attributes>
+            <recursive>True</recursive>
+			<tag>div</tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'review-text'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </reviewText>
+    <reviewUpvote>
+        <filter>
+            <attributes>'class' : 'review-list'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'fk-review'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'review-status-bar'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'unit'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+			<attributes></attributes>
+            <recursive>True</recursive>
+            <tag>strong</tag>
+        </filter>
+    </reviewUpvote>
+    <reviewStarRating>
+        <filter>
+            <attributes>'class' : 'review-list'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'fk-review'</attributes>
+            <recursive>True</recursive>
+			<tag>div</tag>
+        </filter>
+        <filter>
+            <attributes>'class' : 'fk-stars'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </reviewStarRating>
+    <reviewNextPage>
+        <filter>
+            <attributes>'class':'nav_bar_next_prev'</attributes>
+            <recursive>True</recursive>
+			<tag></tag>
+        </filter>
+    </reviewNextPage>
+</site>
